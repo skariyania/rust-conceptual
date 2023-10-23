@@ -5,6 +5,9 @@
 		}
 	],
 	"settings": {
-		"editor.fontLigatures": true
+		"editor.fontLigatures": true,
+		"rust-analyzer.linkedProjects": [
+			"./tutorials/Cargo.toml",
+		]
 	}
 }
