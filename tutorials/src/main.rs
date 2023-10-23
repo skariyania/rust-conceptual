@@ -1,3 +1,6 @@
+use tutorials::media_aggrigator::{news_article::run_news_article, tweet::run_tweets};
+
 fn main() {
-    println!("");
+    run_tweets();
+    run_news_article();
 }
