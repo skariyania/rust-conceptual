@@ -1,4 +1,4 @@
-use crate::summary::Summary;
+use super::summary::Summary;
 
 pub struct Tweet {
     pub username: String,
