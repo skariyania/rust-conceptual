@@ -22,4 +22,17 @@ pub fn run_tweets() {
         retweet: false,
     };
     super::summary::notify(&tweet_content);
+
+    //another way to summarize using summary traits as return type
+    let resp = returns_summarizable();
+    println!("{}", resp.summarize());
+}
+
+pub fn returns_summarizable() -> impl Summary {
+    Tweet {
+        username: String::from("Sahil"),
+        content: String::from("Sahil has reviewed PR for day 7 Learnings"),
+        reply: false,
+        retweet: false,
+    }
 }
