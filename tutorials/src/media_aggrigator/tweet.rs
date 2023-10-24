@@ -21,6 +21,5 @@ pub fn run_tweets() {
         reply: false,
         retweet: false,
     };
-
-    println!("{}", tweet_content.summarize());
+    super::summary::notify(&tweet_content);
 }
