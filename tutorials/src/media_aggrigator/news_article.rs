@@ -20,5 +20,5 @@ pub fn run_news_article() {
         headline: String::from("Nifty was down 260.90 points or 1.34 percent at 19,281.80"),
         location: String::from("Mumbai, India"),
     };
-    println!("{}", news_content.summarize());
+    super::summary::notify(&news_content);
 }
