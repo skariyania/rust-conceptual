@@ -12,5 +12,19 @@ pub fn run_lifetimes_example() {
     println!("value of i excerpt, {:?}", i.part);
 }
 pub fn longest<'a>(x: &'a str, y: &str) -> &'a str {
+    println!("value of y {y}");
     x
+}
+
+/// .
+/// this function is an example of lifetime ellission
+/// some patterns does not require lifetime signatures
+pub fn find_word(s: &str) -> &str {
+    let bytes = s.as_bytes();
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+    &s[..]
 }
