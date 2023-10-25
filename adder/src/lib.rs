@@ -2,6 +2,10 @@ pub fn add(left: usize, right: usize) -> usize {
     left + right
 }
 
+pub fn greeting(name: &str) -> String {
+    format!("Hello! {}", name)
+}
+
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
@@ -56,5 +60,11 @@ mod tests {
         };
 
         assert!(!smaller.can_hold(&larger));
+    }
+
+    #[test]
+    fn greeting_contains_name() {
+        let result = greeting("Sahil");
+        assert!(result.contains("Sahil"));
     }
 }
