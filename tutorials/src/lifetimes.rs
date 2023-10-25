@@ -1,3 +1,5 @@
+use std::fmt::Display;
+
 #[derive(Debug)]
 pub struct ImportExcerpt<'a> {
     part: &'a str,
@@ -27,4 +29,19 @@ pub fn find_word(s: &str) -> &str {
         }
     }
     &s[..]
+}
+
+/// .
+/// this function is an example of generics, lifetimes, trait bonds
+/// all together combined in one implemementation
+pub fn longest_with_announcements<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str
+where
+    T: Display,
+{
+    println!("Announcement! {}", ann);
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
 }
