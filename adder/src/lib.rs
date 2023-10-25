@@ -19,7 +19,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn exploration() {
+    fn it_adds_two_sum() {
         let result = add(2, 2);
         assert_eq!(result, 4);
     }
