@@ -18,6 +18,23 @@ impl Rectangle {
     }
 }
 
+pub struct Guess {
+    value: i32,
+}
+
+impl Guess {
+    pub fn new(value: i32) -> Guess {
+        if value < 1 {
+            panic!(
+                "Guess value must be less than or equal to 100, got {}",
+                value
+            );
+        } else if value > 100 {
+            panic!("Guess value must be greater than 0, got {}", value);
+        }
+        Guess { value }
+    }
+}
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -26,6 +43,16 @@ mod tests {
     fn it_adds_two_sum() {
         let result = add(2, 2);
         assert_eq!(result, 4);
+    }
+
+    #[test]
+    fn it_adds_two_sum_result() -> Result<(), String> {
+        let result = add(2, 2);
+        if result == 4 {
+            Ok(())
+        } else {
+            Err(String::from("2+2 does not equal 4 error"))
+        }
     }
 
     #[test]
@@ -70,5 +97,11 @@ mod tests {
             "Greeting did not contain name, values was `{}`",
             result
         );
+    }
+
+    #[test]
+    #[should_panic(expected = "Guess value must be greater than 0, got 200")]
+    fn guess_greater_than_100() {
+        Guess::new(200);
     }
 }
