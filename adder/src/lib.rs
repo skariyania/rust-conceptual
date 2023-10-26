@@ -46,6 +46,16 @@ mod tests {
     }
 
     #[test]
+    fn it_adds_two_sum_result() -> Result<(), String> {
+        let result = add(2, 2);
+        if result == 4 {
+            Ok(())
+        } else {
+            Err(String::from("2+2 does not equal 4 error"))
+        }
+    }
+
+    #[test]
     #[ignore]
     fn fail_exploration() {
         panic!("this test will fail");
