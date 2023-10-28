@@ -8,7 +8,7 @@ fn main() {
         println!("Problem parsing arguments: {err}");
         process::exit(1);
     });
-    if let Err(e) = run(config) {
+    if let Err(e) = run(&config) {
         println!("Application errored reading file: {e}");
         process::exit(1);
     }
