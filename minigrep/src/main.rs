@@ -6,14 +6,9 @@ fn main() {
         println!("Problem parsing arguments: {err}");
         process::exit(1);
     });
-
     println!("Searching for '{}'", config.query);
-    println!("Searching for '{}'", config.query);
-    let contents =
-        fs::read_to_string(&config.file_path).expect("Should have been able to read the file");
-
-    println!("With text:\n{contents}");
-    println!("In file '{}'", &config.file_path);
+    println!("In file '{}'", config.file_path);
+    run(config);
 }
 
 struct Config {
@@ -31,4 +26,11 @@ impl Config {
 
         Ok(Config { query, file_path })
     }
+}
+
+fn run(config: Config) {
+    let contents =
+        fs::read_to_string(&config.file_path).expect("Should have been able to read the file");
+
+    println!("With text:\n{contents}");
 }
