@@ -8,6 +8,7 @@
 		"editor.fontLigatures": true,
 		"rust-analyzer.linkedProjects": [
 			"./tutorials/Cargo.toml",
-		]
+		],
+		"editor.defaultFormatter": "rust-lang.rust-analyzer"
 	}
 }
