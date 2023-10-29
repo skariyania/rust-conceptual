@@ -72,6 +72,8 @@ pub fn iterator_example() {
         "Iterator with map x=>x+1: after collecting values {:?}",
         collector
     );
+
+    assert_eq!(collector, [2, 3, 4]);
 }
 
 mod tests {
