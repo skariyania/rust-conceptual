@@ -4,5 +4,6 @@ fn main() {
     // tutorials::lifetimes::run_lifetimes_example();
 
     // tutorials::threading_example();
-    tutorials::closure_example_trait();
+    // tutorials::closure_example_trait();
+    tutorials::iterator_example();
 }
