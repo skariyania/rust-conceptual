@@ -24,3 +24,28 @@ pub fn threading_example() {
         .join()
         .unwrap();
 }
+
+pub fn closure_example_trait() {
+    #[derive(Debug)]
+    struct Rectangle {
+        height: u32,
+        width: u32,
+    }
+    let mut list = [
+        Rectangle {
+            width: 10,
+            height: 1,
+        },
+        Rectangle {
+            width: 3,
+            height: 4,
+        },
+        Rectangle {
+            width: 7,
+            height: 14,
+        },
+    ];
+    println!("list values {:#?}", list);
+    list.sort_by_key(|r| r.width);
+    println!("sorted list values {:#?}", list);
+}
