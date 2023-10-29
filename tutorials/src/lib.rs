@@ -46,7 +46,6 @@ pub fn closure_example_trait() {
         },
     ];
     let mut sort_ops = vec![];
-    let val = String::from("by key called");
 
     println!("list values {:#?}", list);
     list.sort_by_key(|r| {
