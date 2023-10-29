@@ -64,6 +64,14 @@ pub fn iterator_example() {
     for val in v1_iter {
         println!("iterating next value {:?}", val);
     }
+
+    let mapper = v1.iter().map(|x| x + 1);
+    println!("Iterator with map x=>x+1: {:?}", mapper);
+    let collector: Vec<i32> = mapper.collect();
+    println!(
+        "Iterator with map x=>x+1: after collecting values {:?}",
+        collector
+    );
 }
 
 mod tests {
