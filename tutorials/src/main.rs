@@ -1,10 +1,9 @@
-use tutorials::{
-    lifetimes::run_lifetimes_example,
-    media_aggrigator::{news_article::run_news_article, tweet::run_tweets},
-};
-
 fn main() {
-    run_tweets();
-    run_news_article();
-    run_lifetimes_example();
+    // tutorials::media_aggrigator::tweet::run_tweets();
+    // tutorials::media_aggrigator::news_article::run_news_article();
+    // tutorials::lifetimes::run_lifetimes_example();
+
+    // tutorials::threading_example();
+    // tutorials::closure_example_trait();
+    tutorials::iterator_example();
 }
