@@ -50,10 +50,10 @@ pub fn closure_example_trait() {
 
     println!("list values {:#?}", list);
     list.sort_by_key(|r| {
-        sort_ops.push(&val);
+        sort_ops.push(r.width);
         r.width
     });
 
     println!("sorted list values {:#?}", list);
-    println!("magic values {:#?}", sort_ops.len());
+    println!("magic values {:#?}", sort_ops);
 }
