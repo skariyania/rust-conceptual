@@ -12,6 +12,7 @@ fn another_private_function() {
 pub mod front_of_house;
 pub mod lifetimes;
 pub mod media_aggrigator;
+pub mod shoe;
 pub fn eat_at_restaurant() {
     crate::front_of_house::hosting::add_to_waitlist();
     front_of_house::hosting::add_to_waitlist();
