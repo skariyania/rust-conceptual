@@ -1,5 +1,5 @@
 [package]
-name = "@skariyania/minigrep"
+name = "saka-mgrep"
 version = "0.0.1"
 edition = "2021"
 license = "MIT"
