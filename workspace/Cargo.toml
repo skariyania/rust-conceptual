@@ -2,4 +2,6 @@
 
 members = [
     "adder",
+    "smart_pointers",
+    "add_one"
 ]
