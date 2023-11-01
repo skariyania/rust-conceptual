@@ -1,4 +1,5 @@
 use add_one::{self, add};
+use rand;
 fn main() {
     let num1 = 3;
     let num2 = 5;
