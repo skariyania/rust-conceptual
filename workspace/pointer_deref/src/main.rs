@@ -1,3 +1,5 @@
+use std::ops::Deref;
+
 use pointer_deref::MyBox;
 
 fn main() {
@@ -19,4 +21,6 @@ fn main() {
     let a = MyBox::new(x);
     println!("value of custom made MyBox: {:?}", a);
     assert_eq!(x, *a);
+    assert_eq!(x, *a.deref());
+    assert_eq!(&x, a.deref());
 }
