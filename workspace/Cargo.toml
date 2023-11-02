@@ -1,7 +1,3 @@
 [workspace]
 
-members = [
-    "adder",
-    "smart_pointers",
-    "add_one"
-]
+members = ["adder", "smart_pointers", "add_one", "pointer_deref"]
