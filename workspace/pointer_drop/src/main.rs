@@ -19,7 +19,7 @@ fn main() {
     println!("Global ledger created {:?}", global_ledger);
     println!("Local ledger created {:?}", local_ledger);
     // now trying to call drop method early
-    drop(local_ledger);
+    drop(global_ledger);
     // uncommenting below line will cause compilation error
     // println!("Local ledger after drop called {:?}", local_ledger);
 }
