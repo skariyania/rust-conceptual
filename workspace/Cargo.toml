@@ -6,4 +6,5 @@ members = [
     "add_one",
     "pointer_deref",
     "pointer_drop",
+    "reference_counter",
 ]
