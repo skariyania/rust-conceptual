@@ -7,4 +7,5 @@ members = [
     "pointer_deref",
     "pointer_drop",
     "reference_counter",
+    "interior_mut",
 ]
