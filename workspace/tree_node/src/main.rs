@@ -6,5 +6,13 @@ struct Node {
     children: RefCell<Vec<Rc<Node>>>,
 }
 fn main() {
-    println!("Hello, world!");
+    let leaf = Rc::new(Node {
+        value: 3,
+        children: RefCell::new(vec![]),
+    });
+
+    let branch = Rc::new(Node {
+        value: 5,
+        children: RefCell::new(vec![Rc::clone(&leaf)]),
+    });
 }
