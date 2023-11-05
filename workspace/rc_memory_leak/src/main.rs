@@ -35,4 +35,14 @@ fn main() {
     // uncomment next lines to see if we have a cyclic reference
     // this is gonna overflow the stack
     // println!("a next item = {:?}", a.tail());
+
+    // check this visual illustration on cyclic pointers in our scenario
+    //
+    //                     [b]-----↴
+    //                             ↓
+    //                             ↓
+    // [a]-------->[5,_]-------->[10,_]→---↓
+    //               ↑                     ↓
+    //               ↑                     ↓
+    //               ^---------------------←
 }
