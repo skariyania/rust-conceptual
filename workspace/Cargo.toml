@@ -8,4 +8,5 @@ members = [
     "pointer_drop",
     "reference_counter",
     "interior_mut",
+    "rc_memory_leak",
 ]
