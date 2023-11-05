@@ -37,7 +37,7 @@ fn main() {
     // println!("a next item = {:?}", a.tail());
 
     // check this visual illustration on cyclic pointers in our scenario
-    //
+    // case before === println!("a next item = {:?}", a.tail());  ===
     //                     [b]-----↴
     //                             ↓
     //                             ↓
@@ -45,4 +45,16 @@ fn main() {
     //               ↑                     ↓
     //               ↑                     ↓
     //               ^---------------------←
+
+    //
+    // case after === println!("a next item = {:?}", a.tail());  ===
+    //
+    //            >----[b]------↴
+    //            ↑             ↓
+    //            ↑     ↓ ------<
+    //            ↑     ↓
+    //           [a]←---<      Invalid     Invalid
+    //
+    //               .
+    //               cyclic reference [b]<-->[a]
 }
