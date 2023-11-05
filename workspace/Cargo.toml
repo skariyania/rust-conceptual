@@ -10,4 +10,5 @@ members = [
     "interior_mut",
     "tree_node",
     "rc_memory_leak",
+    "thread_spawn",
 ]
