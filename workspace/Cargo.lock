@@ -89,6 +89,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "rc_memory_leak"
+version = "0.1.0"
+
+[[package]]
 name = "reference_counter"
 version = "0.1.0"
 
