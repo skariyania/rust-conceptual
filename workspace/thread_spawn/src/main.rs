@@ -1,7 +1,7 @@
 use std::{thread, time::Duration};
 
 fn main() {
-    let handle = thread::spawn(|| {
+    let handle = thread::spawn(move || {
         for i in 1..10 {
             println!("number from spawn thread is: {}", i);
             thread::sleep(Duration::from_millis(100));
