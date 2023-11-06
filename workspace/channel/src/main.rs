@@ -1,7 +1,8 @@
-use std::{sync::mpsc, thread, time::Duration};
+use std::{clone, sync::mpsc, thread, time::Duration};
 
 fn main() {
     let (tx, rx) = mpsc::channel();
+    let names_tx = tx.clone();
 
     //send message to channel
     thread::spawn(move || {
@@ -12,11 +13,7 @@ fn main() {
         // println!("value is {}", val);
     });
 
-    let received = rx.recv().unwrap();
-    println!("Received from channel {}", received);
-
     // another example
-    let (names_tx, names_rx) = mpsc::channel();
 
     //closure fn to send names in channel
     let names_channel = move || {
@@ -38,7 +35,7 @@ fn main() {
 
     // names rx thread
     let names_rx_channel = move || {
-        for received_names in names_rx {
+        for received_names in rx {
             println!("Howdy, {received_names}");
         }
     };
