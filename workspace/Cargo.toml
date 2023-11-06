@@ -11,4 +11,5 @@ members = [
     "tree_node",
     "rc_memory_leak",
     "thread_spawn",
+    "channel",
 ]
