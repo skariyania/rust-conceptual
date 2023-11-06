@@ -1,4 +1,4 @@
-use std::{clone, sync::mpsc, thread, time::Duration};
+use std::{sync::mpsc, thread, time::Duration};
 
 fn main() {
     let (tx, rx) = mpsc::channel();
