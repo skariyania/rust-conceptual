@@ -1,0 +1,21 @@
+[workspace]
+
+exclude = [
+    "tutorials",
+]
+
+members = [
+    "workspace/adder_ws",
+    "workspace/smart_pointers",
+    "workspace/add_one",
+    "workspace/pointer_deref",
+    "workspace/pointer_drop",
+    "workspace/reference_counter",
+    "workspace/interior_mut",
+    "workspace/tree_node",
+    "workspace/rc_memory_leak",
+    "workspace/thread_spawn",
+    "workspace/channel",
+    "workspace/mutex",
+    "workspace/averaged_collection",
+]
