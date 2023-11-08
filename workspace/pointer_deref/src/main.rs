@@ -37,7 +37,7 @@ fn main() {
     //    Then the `&` and `[..]` take a string slice of the String/
     //    that is equal to the whole string to match the signature of `hello`.
     //    This code without deref coercions is harder to read, write, and understand
-    //    with all of these symbols involved. Derefcoercion allows Rust to
+    //    with all of these symbols involved. Deref coercion allows Rust to
     //    handle these conversions for us automatically.
     hello(&(*m)[..]);
 }
