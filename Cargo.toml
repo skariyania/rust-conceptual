@@ -5,17 +5,20 @@ exclude = [
 ]
 
 members = [
-    "workspace/adder_ws",
-    "workspace/smart_pointers",
     "workspace/add_one",
+    "workspace/adder",
+    "workspace/adder_ws",
+    "workspace/averaged_collection",
+    "workspace/channel",
+    "workspace/interior_mut",
+    "workspace/minigrep",
+    "workspace/mutex",
     "workspace/pointer_deref",
     "workspace/pointer_drop",
-    "workspace/reference_counter",
-    "workspace/interior_mut",
-    "workspace/tree_node",
     "workspace/rc_memory_leak",
+    "workspace/reference_counter",
+    "workspace/shirt_company",
+    "workspace/smart_pointers",
     "workspace/thread_spawn",
-    "workspace/channel",
-    "workspace/mutex",
-    "workspace/averaged_collection",
+    "workspace/tree_node",
 ]

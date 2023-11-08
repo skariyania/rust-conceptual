@@ -10,6 +10,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "adder"
+version = "0.1.0"
+
+[[package]]
 name = "adder_ws"
 version = "0.1.0"
 dependencies = [
@@ -106,6 +110,14 @@ version = "0.1.0"
 
 [[package]]
 name = "reference_counter"
+version = "0.1.0"
+
+[[package]]
+name = "saka_grep"
+version = "0.0.1"
+
+[[package]]
+name = "shirt_company"
 version = "0.1.0"
 
 [[package]]
