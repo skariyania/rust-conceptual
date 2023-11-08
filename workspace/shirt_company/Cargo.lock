@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "shirt-company"
+name = "shirt_company"
 version = "0.1.0"

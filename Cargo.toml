@@ -1,0 +1,26 @@
+[workspace]
+
+exclude = [
+    "tutorials",
+]
+
+members = [
+    "book/guessing_game",
+    "book/book_tutorials",
+    "workspace/add_one",
+    "workspace/adder",
+    "workspace/adder_ws",
+    "workspace/averaged_collection",
+    "workspace/channel",
+    "workspace/interior_mut",
+    "workspace/minigrep",
+    "workspace/mutex",
+    "workspace/pointer_deref",
+    "workspace/pointer_drop",
+    "workspace/rc_memory_leak",
+    "workspace/reference_counter",
+    "workspace/shirt_company",
+    "workspace/smart_pointers",
+    "workspace/thread_spawn",
+    "workspace/tree_node",
+]

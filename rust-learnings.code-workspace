@@ -6,9 +6,13 @@
 	],
 	"settings": {
 		"editor.fontLigatures": true,
+		"editor.defaultFormatter": "rust-lang.rust-analyzer",
+		"editor.smoothScrolling": true,
+		"workbench.list.smoothScrolling": true,
+		"terminal.integrated.smoothScrolling": true,
 		"rust-analyzer.linkedProjects": [
+			"./Cargo.toml",
 			"./tutorials/Cargo.toml",
 		],
-		"editor.defaultFormatter": "rust-lang.rust-analyzer"
 	}
 }

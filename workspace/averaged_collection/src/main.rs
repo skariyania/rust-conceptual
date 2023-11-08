@@ -1,4 +1,4 @@
-use averaged_colllection::AveragedCollection;
+use averaged_collection::AveragedCollection;
 
 fn main() {
     let mut number_list = AveragedCollection::new();
