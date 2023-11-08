@@ -40,7 +40,7 @@ pub fn run(config: &Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(&config.file_path)?;
 
     let results = if config.ignore_case {
-        search_case_insensetive(&config.query(), &contents)
+        search_case_insensitive(&config.query(), &contents)
     } else {
         search(&config.query(), &contents)
     };
@@ -58,11 +58,11 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
         .collect()
 }
 
-pub fn search_case_insensetive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     let query = query.to_lowercase();
     contents
         .lines()
-        .filter(|line| line.contains(&query))
+        .filter(|line| line.to_lowercase().contains(&query))
         .collect()
 }
 
@@ -71,7 +71,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn case_sensetive() {
+    fn case_sensitive() {
         let query = "duct";
         let contents = "\
 Rust:
@@ -83,7 +83,7 @@ Duct tape";
     }
 
     #[test]
-    fn case_insensetive() {
+    fn case_insensitive() {
         let query = "rust";
         let contents = "\
 Rust:
@@ -92,7 +92,7 @@ Pick three.
 Trust me.";
         assert_eq!(
             vec!["Rust:", "Trust me."],
-            search_case_insensetive(query, contents)
+            search_case_insensitive(query, contents)
         );
     }
 }
