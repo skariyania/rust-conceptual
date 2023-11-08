@@ -1,5 +1,5 @@
 # actions status
-![example branch parameter](https://github.com/skariyania/rust-conceptual/workflows/Rust/badge.svg?branch=main)
+![example branch parameter](https://github.com/skariyania/rust-conceptual/workflows/Rust/badge.svg)
 
 # rust-learnings
 learning rust by reading rust programming book and implementing concepts everyday
