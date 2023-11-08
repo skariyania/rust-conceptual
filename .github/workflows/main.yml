@@ -16,7 +16,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build
+    - name: Build Tutorials
       run: cargo build --verbose --manifest-path tutorials/Cargo.toml
-    - name: Run tests
+    - name: Run Tutorials tests
       run: cargo test --verbose --manifest-path tutorials/Cargo.toml
+    - name: Build Workspaces
+      run: cargo build --verbose --manifest-path Cargo.toml
+    - name: Run Workspaces tests
+      run: cargo test --verbose --manifest-path Cargo.toml
