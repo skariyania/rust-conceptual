@@ -5,6 +5,8 @@ exclude = [
 ]
 
 members = [
+    "book/guessing_game",
+    "book/book_tutorials",
     "workspace/add_one",
     "workspace/adder",
     "workspace/adder_ws",
