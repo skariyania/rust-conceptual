@@ -13,4 +13,5 @@ members = [
     "thread_spawn",
     "channel",
     "mutex",
+    "averaged_collection",
 ]
