@@ -1,3 +1,8 @@
+<h1 align="center">
+    <img src="https://img.shields.io/badge/Rust%20Conceptual-grey?style=for-the-badge&logo=rust" width="400px" alt="Rust Conceptual" />
+</h1>
+
+
 <h4 align="center">
   <a href="https://github.com/skariyania/rust-conceptual/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-orange" alt="Rust conceptual is licensed under MIT" />
