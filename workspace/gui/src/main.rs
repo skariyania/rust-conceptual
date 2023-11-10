@@ -1,4 +1,4 @@
-use trait_objects::{Button, Screen, SelectBox};
+use gui::{Button, Screen, SelectBox};
 fn main() {
     let screen = Screen {
         components: vec![
