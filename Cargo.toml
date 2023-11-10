@@ -23,4 +23,5 @@ members = [
     "workspace/smart_pointers",
     "workspace/thread_spawn",
     "workspace/tree_node",
+    "workspace/gui"
 ]
