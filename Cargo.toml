@@ -12,6 +12,7 @@ members = [
     "workspace/adder_ws",
     "workspace/averaged_collection",
     "workspace/channel",
+    "workspace/gui",
     "workspace/interior_mut",
     "workspace/minigrep",
     "workspace/mutex",
@@ -23,6 +24,6 @@ members = [
     "workspace/smart_pointers",
     "workspace/thread_spawn",
     "workspace/tree_node",
-    "workspace/gui",
+    "workspace/workday",
     "blog",
 ]
