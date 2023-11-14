@@ -1,8 +1,6 @@
 [workspace]
 
-exclude = [
-    "tutorials",
-]
+exclude = ["tutorials"]
 
 members = [
     "book/guessing_game",
@@ -24,6 +22,7 @@ members = [
     "workspace/smart_pointers",
     "workspace/thread_spawn",
     "workspace/tree_node",
+    "workspace/gui",
     "workspace/workday",
     "blog",
 ]
