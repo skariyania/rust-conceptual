@@ -16,7 +16,10 @@ fn main() {
     } else {
         println!("Using blue as the background color");
     }
-    while_let_example()
+    while_let_example();
+
+    let point = (3, 5);
+    print_coordinates(&point);
 }
 
 fn while_let_example() {
@@ -28,4 +31,8 @@ fn while_let_example() {
     while let Some(top) = stack.pop() {
         println!("stack popped: {}", top);
     }
+}
+
+fn print_coordinates(&(x, y): &(i32, i32)) {
+    println!("Current location: ({}, {})", x, y);
 }
