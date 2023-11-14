@@ -16,4 +16,16 @@ fn main() {
     } else {
         println!("Using blue as the background color");
     }
+    while_let_example()
+}
+
+fn while_let_example() {
+    let mut stack = Vec::new();
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+
+    while let Some(top) = stack.pop() {
+        println!("stack popped: {}", top);
+    }
 }
