@@ -5,8 +5,9 @@ exclude = [
 ]
 
 members = [
-    "book/guessing_game",
+    "blog",
     "book/book_tutorials",
+    "book/guessing_game",
     "workspace/add_one",
     "workspace/adder",
     "workspace/adder_ws",
@@ -25,5 +26,4 @@ members = [
     "workspace/thread_spawn",
     "workspace/tree_node",
     "workspace/workday",
-    "blog",
 ]
