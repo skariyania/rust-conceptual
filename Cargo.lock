@@ -80,6 +80,10 @@ name = "mutex"
 version = "0.1.0"
 
 [[package]]
+name = "pattern_matching"
+version = "0.1.0"
+
+[[package]]
 name = "pointer_deref"
 version = "0.1.0"
 
