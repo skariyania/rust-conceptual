@@ -13,6 +13,7 @@ members = [
     "workspace/adder_ws",
     "workspace/averaged_collection",
     "workspace/channel",
+    "workspace/destructuring",
     "workspace/gui",
     "workspace/interior_mut",
     "workspace/minigrep",
