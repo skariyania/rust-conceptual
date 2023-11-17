@@ -48,8 +48,8 @@ fn destructuring_match() {
     println!("@{}", fn_name!());
     let p = Point { x: 0, y: 7 };
     match p {
-        Point { x, y: 0 } => println!("on the x {x}"),
-        Point { x: 0, y } => println!("on the x {y}"),
+        Point { x, y: 0 } => println!("point is on the x axis {x}"),
+        Point { x: 0, y } => println!("point is on the y axis {y}"),
         Point { x, y } => {
             println!("On neither axis: ({x}, {y}")
         }
