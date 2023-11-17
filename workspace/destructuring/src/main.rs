@@ -3,6 +3,13 @@ struct Point {
     y: i32,
 }
 
+enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
+
 //creating macro_rules to return fn name
 macro_rules! fn_name {
     () => {{
@@ -20,6 +27,19 @@ fn main() {
     struct_destructuring_values();
     struct_destructuring_values_shorthand();
     destructuring_match();
+
+    //enum destructuring
+    let msg1 = Message::ChangeColor(20, 50, 100);
+    message_restructuring(msg1);
+    //==
+    let msg2 = Message::Quit;
+    message_restructuring(msg2);
+    //==
+    let msg3 = Message::Write("halo".to_string());
+    message_restructuring(msg3);
+    //==
+    let msg3 = Message::Move {x: 1, y: -1};
+    message_restructuring(msg3);
 }
 
 fn struct_destructuring_values() {
@@ -52,6 +72,26 @@ fn destructuring_match() {
         Point { x: 0, y } => println!("point is on the y axis {y}"),
         Point { x, y } => {
             println!("On neither axis: ({x}, {y}")
+        }
+    }
+}
+
+fn message_restructuring(msg: Message) {
+    match msg {
+        Message::Quit => {
+            println!("The quit variant in message has no data");
+        }
+        Message::Move { x, y } => {
+            println!("The move variant in message has data: (x={}, y={})", x, y);
+        }
+        Message::Write(text) => {
+            println!("The write variant has text data: '{text}'");
+        }
+        Message::ChangeColor(r, g, b) => {
+            println!(
+                "The change color variant has data (r={}, g={}, b={})",
+                r, g, b
+            );
         }
     }
 }
