@@ -51,6 +51,14 @@ fn main() {
     //==
     let msg5 = Message::Color(Color::Rgb(0, 0, 255));
     message_restructuring(msg5);
+
+    let ((feet, inches), Point { x, y }) = ((4, 5), Point { x: 3, y: -1 });
+    println!(
+        "destructuring complex data types - mix of tuple ({}, {}) and Point=({x}, {y})",
+        feet, inches
+    );
+
+    match_ignore_case();
 }
 
 fn struct_destructuring_values() {
@@ -117,4 +125,18 @@ fn message_restructuring(msg: Message) {
             );
         }
     }
+}
+
+fn match_ignore_case() {
+    let mut setting_value = Some(5);
+    let new_setting_value = Some(10);
+    match (setting_value, new_setting_value) {
+        (Some(_), Some(_)) => {
+            println!("can't overwrite an existing customized value");
+        }
+        _ => {
+            setting_value = new_setting_value;
+        }
+    }
+    println!("setting_value is: {:?}", setting_value);
 }
