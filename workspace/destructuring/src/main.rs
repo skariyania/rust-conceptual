@@ -3,11 +3,16 @@ struct Point {
     y: i32,
 }
 
+enum Color {
+    Rgb(i32, i32, i32),
+    Hsv(i32, i32, i32),
+}
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
     Write(String),
     ChangeColor(i32, i32, i32),
+    Color(Color),
 }
 
 //creating macro_rules to return fn name
@@ -40,6 +45,12 @@ fn main() {
     //==
     let msg3 = Message::Move { x: 1, y: -1 };
     message_restructuring(msg3);
+    //==
+    let msg4 = Message::Color(Color::Hsv(0, 40, 200));
+    message_restructuring(msg4);
+    //==
+    let msg5 = Message::Color(Color::Rgb(0, 0, 255));
+    message_restructuring(msg5);
 }
 
 fn struct_destructuring_values() {
@@ -91,6 +102,18 @@ fn message_restructuring(msg: Message) {
             println!(
                 "The change color variant has data (r={}, g={}, b={})",
                 r, g, b
+            );
+        }
+        Message::Color(Color::Rgb(r, g, b)) => {
+            println!(
+                "The Color variant has sub variant rgb with data (r={}, g={}, b={})",
+                r, g, b
+            );
+        }
+        Message::Color(Color::Hsv(h, s, v)) => {
+            println!(
+                "The Color variant has sub variant hsv with data (h={}, s={}, v={})",
+                h, s, v
             );
         }
     }
