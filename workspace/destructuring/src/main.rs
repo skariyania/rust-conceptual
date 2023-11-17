@@ -38,7 +38,7 @@ fn main() {
     let msg3 = Message::Write("halo".to_string());
     message_restructuring(msg3);
     //==
-    let msg3 = Message::Move {x: 1, y: -1};
+    let msg3 = Message::Move { x: 1, y: -1 };
     message_restructuring(msg3);
 }
 
