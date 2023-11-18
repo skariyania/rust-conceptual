@@ -18,5 +18,5 @@ fn at_binds(val: Message) {
 
 fn main() {
     let msg = Message::Hello { id: 5 };
-    at_binds(msg)
+    at_binds(msg);
 }
