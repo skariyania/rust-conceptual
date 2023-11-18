@@ -9,6 +9,7 @@ members = [
     "workspace/add_one",
     "workspace/adder",
     "workspace/adder_ws",
+    "workspace/at_binding",
     "workspace/averaged_collection",
     "workspace/channel",
     "workspace/destructuring",
