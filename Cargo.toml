@@ -27,5 +27,6 @@ members = [
     "workspace/thread_spawn",
     "workspace/tree_node",
     "workspace/gui",
+    "workspace/use_unsafe",
     "workspace/workday",
 ]
