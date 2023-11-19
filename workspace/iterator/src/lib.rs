@@ -30,6 +30,12 @@ pub struct Point {
     pub y: i32,
 }
 
+// below snip is an example of how add traits can have default impl
+// trait Add<Rhs = Self> {
+//     type Output;
+//     fn add(self, rhs: Rhs) -> Self::Output;
+// }
+
 impl Add for Point {
     type Output = Point;
     fn add(self, other: Point) -> Point {
