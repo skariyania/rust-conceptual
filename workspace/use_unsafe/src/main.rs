@@ -53,6 +53,10 @@ fn main() {
         println!("accessing memory location at r2: {:?}", *r2);
         // below line will compile however not guaranty or its running a program
         // println!("accessing memory location at random: {:?}", *r);
-        dangerous()
+        dangerous();
+        let mut temp = [3, 4, 5];
+        //below function splits above slice [3,4,5] into two slices at index 1 (specified with mid)
+        let split_slice = split_at_mut(&mut temp, 1);
+        println!("split at mut fn returns tuple {:?}", split_slice);
     }
 }
