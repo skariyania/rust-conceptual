@@ -1,4 +1,5 @@
 [workspace]
+resolver = "2"
 
 exclude = [
     "tutorials",
@@ -15,8 +16,11 @@ members = [
     "workspace/averaged_collection",
     "workspace/channel",
     "workspace/destructuring",
+    "workspace/foreign_function",
+    "workspace/global_variable",
     "workspace/gui",
     "workspace/interior_mut",
+    "workspace/iterator",
     "workspace/minigrep",
     "workspace/mutex",
     "workspace/pattern_matching",
