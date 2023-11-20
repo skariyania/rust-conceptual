@@ -16,6 +16,7 @@ members = [
     "workspace/averaged_collection",
     "workspace/channel",
     "workspace/destructuring",
+    "workspace/fn_params",
     "workspace/foreign_function",
     "workspace/global_variable",
     "workspace/gui",
