@@ -100,6 +100,10 @@ name = "mutex"
 version = "0.1.0"
 
 [[package]]
+name = "newtype_pattern"
+version = "0.1.0"
+
+[[package]]
 name = "pattern_matching"
 version = "0.1.0"
 

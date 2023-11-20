@@ -23,6 +23,7 @@ members = [
     "workspace/iterator",
     "workspace/minigrep",
     "workspace/mutex",
+    "workspace/newtype_pattern",
     "workspace/pattern_matching",
     "workspace/pointer_deref",
     "workspace/pointer_drop",
