@@ -52,6 +52,10 @@ name = "destructuring"
 version = "0.1.0"
 
 [[package]]
+name = "fn_params"
+version = "0.1.0"
+
+[[package]]
 name = "foreign_function"
 version = "0.1.0"
 
