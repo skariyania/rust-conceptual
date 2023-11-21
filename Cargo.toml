@@ -34,5 +34,6 @@ members = [
     "workspace/tree_node",
     "workspace/gui",
     "workspace/use_unsafe",
+    "workspace/util",
     "workspace/workday",
 ]
