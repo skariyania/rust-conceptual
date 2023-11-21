@@ -164,6 +164,10 @@ name = "reference_counter"
 version = "0.1.0"
 
 [[package]]
+name = "returning_closure"
+version = "0.1.0"
+
+[[package]]
 name = "saka_grep"
 version = "0.0.1"
 
@@ -185,6 +189,10 @@ version = "0.1.0"
 
 [[package]]
 name = "use_unsafe"
+version = "0.1.0"
+
+[[package]]
+name = "util"
 version = "0.1.0"
 
 [[package]]

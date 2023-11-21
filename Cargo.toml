@@ -28,11 +28,13 @@ members = [
     "workspace/pointer_drop",
     "workspace/rc_memory_leak",
     "workspace/reference_counter",
+    "workspace/returning_closure",
     "workspace/shirt_company",
     "workspace/smart_pointers",
     "workspace/thread_spawn",
     "workspace/tree_node",
     "workspace/gui",
     "workspace/use_unsafe",
+    "workspace/util",
     "workspace/workday",
 ]
