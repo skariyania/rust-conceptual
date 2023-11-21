@@ -30,6 +30,7 @@ members = [
     "workspace/pointer_drop",
     "workspace/rc_memory_leak",
     "workspace/reference_counter",
+    "workspace/returning_closure",
     "workspace/shirt_company",
     "workspace/smart_pointers",
     "workspace/thread_spawn",
