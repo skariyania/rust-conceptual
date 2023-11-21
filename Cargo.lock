@@ -188,6 +188,10 @@ name = "use_unsafe"
 version = "0.1.0"
 
 [[package]]
+name = "util"
+version = "0.1.0"
+
+[[package]]
 name = "wasi"
 version = "0.11.0+wasi-snapshot-preview1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
