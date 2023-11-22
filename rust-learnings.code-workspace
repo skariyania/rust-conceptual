@@ -14,5 +14,11 @@
 			"./Cargo.toml",
 			"./tutorials/Cargo.toml",
 		],
+		"[jsonc]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
+		},
+		"[toml]": {
+			"editor.defaultFormatter": "tamasfe.even-better-toml"
+		},
 	}
 }
