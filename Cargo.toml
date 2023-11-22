@@ -1,14 +1,13 @@
 [workspace]
 resolver = "2"
 
-exclude = [
-    "tutorials",
-]
+exclude = ["tutorials"]
 
 members = [
     "blog",
     "book/book_tutorials",
     "book/guessing_game",
+    "web_server",
     "workspace/add_one",
     "workspace/adder",
     "workspace/adder_ws",
