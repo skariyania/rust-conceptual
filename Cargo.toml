@@ -36,5 +36,6 @@ members = [
     "workspace/gui",
     "workspace/use_unsafe",
     "workspace/util",
+    "workspace/whoami",
     "workspace/workday",
 ]
