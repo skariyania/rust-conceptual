@@ -39,6 +39,8 @@ fn main() {
     println!("starting server :8080");
     for stream in listener.incoming() {
         let stream = stream.unwrap();
+        let _ = stream.set_nonblocking(true);
+        let _ = stream.set_nodelay(true);
 
         thread::spawn(|| {
             handle_connection(stream);
