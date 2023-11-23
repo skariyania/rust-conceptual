@@ -30,7 +30,8 @@ impl Worker {
                     job();
                 }
                 Err(_) => {
-                    println!("Worker {id} disconnected; shutting down.");
+                    println!("Worker {} disconnected; shutting down.", id);
+
                     break;
                 }
             }
@@ -82,7 +83,7 @@ impl ThreadPool {
     ///
     /// The size is the number of threads in the pool.
     ///
-    /// #panics
+    /// # Panics
     ///
     /// The `new` function will panic if the size is zero.
     pub fn new(size: usize) -> ThreadPool {
@@ -103,6 +104,15 @@ impl ThreadPool {
         }
     }
 
+    /// Executes a closure in the thread pool.
+    ///
+    /// # Arguments
+    ///
+    /// * `f` - The closure to be executed in parallel.
+    ///
+    /// # Panics
+    ///
+    /// The `execute` function will panic if the sender channel is closed.
     pub fn execute<F>(&self, f: F)
     where
         F: FnOnce() + Send + 'static,
@@ -112,17 +122,12 @@ impl ThreadPool {
     }
 }
 
+/// Implements the `Drop` trait for the `ThreadPool` struct.
+///
+/// When an instance of `ThreadPool` goes out of scope, this `drop` method is automatically called.
+/// It sends a terminate message to all workers and shuts down all workers by joining their threads.
 impl Drop for ThreadPool {
-    /// Shuts down all worker threads in the pool.
-    ///
-    /// # Examples
-    ///
-    /// ```
-    /// use web_server::ThreadPool;
-    ///
-    /// let pool = ThreadPool::new(4);
-    /// pool.shutdown();
-    /// ```
+    /// Drops the `WebServer` instance, sending terminate messages to all workers and shutting them down.
     fn drop(&mut self) {
         println!("Sending terminate message to all workers.");
 
