@@ -144,3 +144,41 @@ impl Drop for ThreadPool {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_thread_pool_new() {
+        let pool = ThreadPool::new(4);
+        assert_eq!(pool.workers.len(), 4);
+        assert!(pool.sender.is_some());
+    }
+
+    #[test]
+    #[should_panic]
+    fn test_thread_pool_new_zero_size() {
+        ThreadPool::new(0);
+    }
+
+    #[test]
+    fn test_thread_pool_execute() {
+        let pool = ThreadPool::new(4);
+        let counter = Arc::new(Mutex::new(0));
+
+        for _ in 0..10 {
+            let counter = Arc::clone(&counter);
+            pool.execute(move || {
+                let mut num = counter.lock().unwrap();
+                *num += 1;
+            });
+        }
+
+        // Wait for all tasks to complete
+        std::thread::sleep(std::time::Duration::from_secs(1));
+
+        let counter = counter.lock().unwrap();
+        assert_eq!(*counter, 10);
+    }
+}
