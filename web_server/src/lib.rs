@@ -3,12 +3,24 @@ use std::{
     thread,
 };
 
+/// Represents a worker in the web server.
 struct Worker {
     id: usize,
     thread: thread::JoinHandle<()>,
 }
 
+/// Represents a worker that executes jobs in a multi-threaded environment.
 impl Worker {
+    /// Creates a new worker with the given ID and receiver.
+    ///
+    /// # Arguments
+    ///
+    /// * `id` - The ID of the worker.
+    /// * `receiver` - The receiver for receiving jobs.
+    ///
+    /// # Returns
+    ///
+    /// A new `Worker` instance.
     fn new(id: usize, receiver: Arc<Mutex<mpsc::Receiver<Job>>>) -> Worker {
         let thread = thread::spawn(move || loop {
             let job = receiver.lock().unwrap().recv().unwrap();
@@ -22,13 +34,40 @@ impl Worker {
     }
 }
 
+type Job = Box<dyn FnOnce() + Send + 'static>;
+
+/// A thread pool that manages a collection of worker threads.
 pub struct ThreadPool {
     workers: Vec<Worker>,
     sender: mpsc::Sender<Job>,
 }
 
-type Job = Box<dyn FnOnce() + Send + 'static>;
-
+/// A thread pool for executing tasks concurrently.
+///
+/// The `ThreadPool` struct provides a way to create a pool of worker threads
+/// that can execute tasks in parallel. It uses a fixed-size pool of worker threads
+/// and a channel to communicate between the main thread and the worker threads.
+///
+/// # Examples
+///
+/// Creating a new `ThreadPool` with 4 worker threads:
+///
+/// ```
+/// use web_server::ThreadPool;
+///
+/// let pool = ThreadPool::new(4);
+/// ```
+///
+/// Executing a task in the thread pool:
+///
+/// ```
+/// use web_server::ThreadPool;
+///
+/// let pool = ThreadPool::new(4);
+/// pool.execute(|| {
+///     // code to be executed in parallel
+/// });
+/// ```
 impl ThreadPool {
     /// Create a new ThreadPool.
     ///
