@@ -2,9 +2,12 @@ use std::{
     fs,
     io::{BufRead, BufReader, Write},
     net::{TcpListener, TcpStream},
-    thread,
+    thread::{self},
     time::Duration,
 };
+
+use web_server::ThreadPool;
+
 fn request_logger(buf_reader: BufReader<&mut TcpStream>) {
     let http_request: Vec<_> = buf_reader
         .lines()
@@ -13,6 +16,7 @@ fn request_logger(buf_reader: BufReader<&mut TcpStream>) {
         .collect();
     println!("Request: {:#?}", http_request);
 }
+
 fn handle_connection(mut stream: TcpStream) {
     //reading request data
     let buf_reader = BufReader::new(&mut stream);
@@ -34,15 +38,19 @@ fn handle_connection(mut stream: TcpStream) {
     let response = format!("{status_line}\r\nContent-lenth: {length}\r\n\r\n{contents}");
     stream.write_all(response.as_bytes()).unwrap();
 }
+
 fn main() {
     let listener = TcpListener::bind("127.0.0.1:8080").unwrap();
+
+    let pool = ThreadPool::new(4);
+
     println!("starting server :8080");
     for stream in listener.incoming() {
         let stream = stream.unwrap();
-        let _ = stream.set_nonblocking(true);
-        let _ = stream.set_nodelay(true);
+        // let _ = stream.set_nonblocking(true);
+        // let _ = stream.set_nodelay(true);
 
-        thread::spawn(|| {
+        pool.execute(|| {
             handle_connection(stream);
         });
     }
