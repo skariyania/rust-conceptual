@@ -3,6 +3,9 @@ use std::{
     thread,
 };
 
+type Job = Box<dyn FnOnce() + Send + 'static>;
+type Receiver = Arc<Mutex<mpsc::Receiver<Job>>>;
+
 /// Represents a worker in the web server.
 struct Worker {
     id: usize,
@@ -21,7 +24,7 @@ impl Worker {
     /// # Returns
     ///
     /// A new `Worker` instance.
-    fn new(id: usize, receiver: Arc<Mutex<mpsc::Receiver<Job>>>) -> Worker {
+    fn new(id: usize, receiver: Receiver) -> Worker {
         let thread = thread::spawn(move || loop {
             let message = receiver.lock().unwrap().recv();
             match message {
@@ -43,8 +46,6 @@ impl Worker {
         }
     }
 }
-
-type Job = Box<dyn FnOnce() + Send + 'static>;
 
 /// A thread pool that manages a collection of worker threads.
 pub struct ThreadPool {
