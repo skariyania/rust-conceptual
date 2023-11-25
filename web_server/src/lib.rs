@@ -3,13 +3,19 @@ use std::{
     thread,
 };
 
+/// Represents a job to be executed by a worker.
+type Job = Box<dyn FnOnce() + Send + 'static>;
+
+/// Represents a receiver for receiving jobs.
+type Receiver = Arc<Mutex<mpsc::Receiver<Job>>>;
+
 struct Worker {
     id: usize,
     thread: thread::JoinHandle<()>,
 }
 
 impl Worker {
-    fn new(id: usize, receiver: Arc<Mutex<mpsc::Receiver<Job>>>) -> Worker {
+    fn new(id: usize, receiver: Receiver) -> Worker {
         let thread = thread::spawn(move || loop {
             let job = receiver.lock().unwrap().recv().unwrap();
 
@@ -26,8 +32,6 @@ pub struct ThreadPool {
     workers: Vec<Worker>,
     sender: mpsc::Sender<Job>,
 }
-
-type Job = Box<dyn FnOnce() + Send + 'static>;
 
 impl ThreadPool {
     /// Create a new ThreadPool.
