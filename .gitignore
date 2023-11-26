@@ -1,2 +1,5 @@
 **/target
 .DS_store
+
+#ignore devcontainer
+.devcontainer/
