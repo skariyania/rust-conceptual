@@ -476,10 +476,6 @@ name = "blog"
 version = "0.1.0"
 
 [[package]]
-name = "book_tutorials"
-version = "0.1.0"
-
-[[package]]
 name = "bumpalo"
 version = "3.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
