@@ -34,6 +34,7 @@ members = [
     "workspace/smart_pointers",
     "workspace/thread_spawn",
     "workspace/tide_web_server",
+    "workspace/tokio_server",
     "workspace/tree_node",
     "workspace/gui",
     "workspace/use_unsafe",
