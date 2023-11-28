@@ -20,9 +20,29 @@
   </a>
 </h4>
 
-# rust-learnings
-learning rust by reading rust programming book and implementing concepts everyday
-- workspace directory includes small working examples
-- book directory is also having small projects created earlier
-- I shall reorganize everything with week wise activities - this may help new learners to navigate
+# Rust Learning
+> learning rust by reading rust programming book and implementing concepts everyday
+- workspace directory includes small working examples.
+
+- book directory is also having small projects created earlier, this will be moved inside workspace shortly.
+
+- I have started reorganizing project structure to recommended standards, however it may take some time to complete.
+
 - tutorials directory I began this project with and requires refactoring, yet pending
+
+- I will be also updating all the other links, tools that I have used in upcoming week 
+
+
+### More about this repository
+- Contains small practical examples of rust language programs.
+
+- This is also a good example of how to organize project structure in ant rust repo using cargo.
+
+- most of the exercises and tutorials in this repository is prepared by learning rust programming language book available [here](https://doc.rust-lang.org/book/). I highly recommend this reading. It was worth investing time in learning rust with this book.
+
+- I thought It would be good idea to share my version of summary highlights, [refer this link](https://drive.google.com/file/d/12HvD1PUefYbPreYAWpNl-x05AP7QW-4n/view?usp=drive_link) to quickly summarize.
+
+- I am yet exploring easy ways to extract highlights from PDF to md or text format, for your ease of reading.
+
+
+>Reach out to me for any feedback, I appreciate. Happy Learning
