@@ -22,27 +22,27 @@
 
 # Rust Learning
 > learning rust by reading rust programming book and implementing concepts everyday
-- workspace directory includes small working examples.
-
-- book directory is also having small projects created earlier, this will be moved inside workspace shortly.
+- Contains small practical and working examples.
 
 - I have started reorganizing project structure to recommended standards, however it may take some time to complete.
-
-- tutorials directory I began this project with and requires refactoring, yet pending
 
 - I will be also updating all the other links, tools that I have used in upcoming week 
 
 
 ### More about this repository
-- Contains small practical examples of rust language programs.
-
-- This is also a good example of how to organize project structure in ant rust repo using cargo.
-
+- I started this project with tutorials directory, those are very first rust programs I wrote.
+- Later on while learning, I found better way to organize cargo. Hence other part of the repo is in workspace and it contains well organized source.
+- project requires refactoring tutorials directory, yet pending. I will complete it eventually.
+- Workspace directory includes small working examples
+- book directory is also having small projects created earlier, this will be moved inside workspace in next week.
+- This repo is also a good example of how to organize project structure in any rust repo using cargo.
 - most of the exercises and tutorials in this repository is prepared by learning rust programming language book available [here](https://doc.rust-lang.org/book/). I highly recommend this reading. It was worth investing time in learning rust with this book.
-
 - I thought It would be good idea to share my version of summary highlights, [refer this link](https://drive.google.com/file/d/12HvD1PUefYbPreYAWpNl-x05AP7QW-4n/view?usp=drive_link) to quickly summarize.
-
 - I am yet exploring easy ways to extract highlights from PDF to md or text format, for your ease of reading.
 
+### Crates.io
+- Crates.io is official rust package registry.
+- similar to [npm](https://www.npmjs.com/) for node.js, [pypi](https://pypi.org/) for python and [packages](https://pkg.go.dev/) for golang
+- When I was learning rust, I have created and published working crate. [check my crates](https://crates.io/users/skariyania). you will also learn how to create and publish your crate during course of reading the book
 
 >Reach out to me for any feedback, I appreciate. Happy Learning
