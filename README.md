@@ -20,6 +20,21 @@
   </a>
 </h4>
 
+### Environment Setup
+1. Install Rust from https://rustup.rs/
+
+### Kick-starter cargo commands
+```
+$ cargo build
+```
+
+```
+$ cargo test
+```
+```
+$ cargo run
+```
+
 # Rust Learning
 > learning rust by reading rust programming book and implementing concepts everyday
 - Contains small practical and working examples.
