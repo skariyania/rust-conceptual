@@ -21,21 +21,38 @@
 </h4>
 
 ### Environment Setup
+>
+#### Rust 
 1. Install Rust from https://rustup.rs/
 
-### Kick-starter cargo commands
-```
-$ cargo build
-```
+#### IDE
+1. Install Open Source VS Code from https://vscodium.com/ **OR**
+2. Rust Rover from Jet Brains from https://www.jetbrains.com/rust/ **OR**
+3. ***PRO*** Developers's choice https://neovim.io/
 
+### Kick-starter cargo commands
+>
+&NewLine;
+1. Create new cargo project
+
+```sh
+cargo new <project_name>
 ```
+2. Build project
+```sh
+cargo build
+```
+3. Run test cases
+```sh
 $ cargo test
 ```
-```
+4. Run program natively
+```sh
 $ cargo run
 ```
 
 # Rust Learning
+&NewLine;
 > learning rust by reading rust programming book and implementing concepts everyday
 - Contains small practical and working examples.
 
