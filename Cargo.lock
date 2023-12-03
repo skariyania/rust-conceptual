@@ -388,6 +388,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "async_await_fn"
+version = "0.1.0"
+
+[[package]]
 name = "async_future"
 version = "0.1.0"
 dependencies = [
