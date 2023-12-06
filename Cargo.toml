@@ -4,7 +4,6 @@ resolver = "2"
 exclude = ["tutorials"]
 
 members = [
-    "blog",
     "web_server",
     "workspace/add_one",
     "workspace/adder",
@@ -13,6 +12,7 @@ members = [
     "workspace/async_future",
     "workspace/at_binding",
     "workspace/averaged_collection",
+    "workspace/blog",
     "workspace/channel",
     "workspace/destructuring",
     "workspace/fn_params",
