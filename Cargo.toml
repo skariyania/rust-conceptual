@@ -4,7 +4,6 @@ resolver = "2"
 exclude = ["tutorials"]
 
 members = [
-    "web_server",
     "workspace/add_one",
     "workspace/adder",
     "workspace/adder_ws",
@@ -41,6 +40,7 @@ members = [
     "workspace/tree_node",
     "workspace/use_unsafe",
     "workspace/util",
+    "workspace/web_server",
     "workspace/whoami",
     "workspace/workday",
 ]
