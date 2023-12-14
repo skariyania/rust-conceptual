@@ -3,5 +3,5 @@ fn main() {
     _another_scaler();
 }
 fn _another_scaler() {
-    panic!("error occured, false alarm!");
+    panic!("errored, false alarm!");
 }
