@@ -1,6 +1,5 @@
 use proc_macro::TokenStream;
 use quote::quote;
-use syn;
 
 fn impl_whoami_macro(ast: &syn::DeriveInput) -> TokenStream {
     let name = &ast.ident;
@@ -19,6 +18,6 @@ pub fn whoami_macro_derive(input: TokenStream) -> TokenStream {
     // construct representation of rust code as abstract syntax tree
     let ast = syn::parse(input).unwrap();
 
-    //build trait implementaion
+    //build trait implementation
     impl_whoami_macro(&ast)
 }
