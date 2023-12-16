@@ -8,5 +8,5 @@ fn do_twice(f: fn(i32) -> i32, arg: i32) -> i32 {
 fn main() {
     let result = do_twice(add_one, 2);
     // (2+1) + (2+1)
-    println!("add_twise returns: {}", result);
+    println!("add_twice returns: {}", result);
 }
