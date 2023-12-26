@@ -829,6 +829,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "future_streams"
+version = "0.1.0"
+dependencies = [
+ "futures",
+]
+
+[[package]]
 name = "futures"
 version = "0.3.30"
 source = "registry+https://github.com/rust-lang/crates.io-index"
