@@ -16,6 +16,7 @@ members = [
     "workspace/destructuring",
     "workspace/fn_params",
     "workspace/foreign_function",
+    "workspace/future_streams",
     "workspace/global_variable",
     "workspace/guessing_game",
     "workspace/gui",
