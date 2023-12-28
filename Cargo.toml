@@ -11,6 +11,7 @@ members = [
     "workspace/async_future",
     "workspace/at_binding",
     "workspace/averaged_collection",
+    "workspace/binary-tree",
     "workspace/blog",
     "workspace/channel",
     "workspace/destructuring",
