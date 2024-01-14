@@ -14,6 +14,7 @@ members = [
     "workspace/binary_tree",
     "workspace/blog",
     "workspace/channel",
+    "workspace/deltalake_setup",
     "workspace/destructuring",
     "workspace/fn_params",
     "workspace/foreign_function",
