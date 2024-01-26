@@ -4,6 +4,7 @@ resolver = "2"
 exclude = ["tutorials"]
 
 members = [
+    "example/rocksdb-example",
     "workspace/add_one",
     "workspace/adder",
     "workspace/adder_ws",
