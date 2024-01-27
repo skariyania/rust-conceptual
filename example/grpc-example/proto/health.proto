@@ -1,0 +1,26 @@
+// version of protocol buffer used
+syntax = "proto3";
+
+// package name
+// ## helloworld
+package health;
+
+// executable service
+// ## Greeter
+service Heartbeat {
+    // functions
+    // ## SayHello
+    // ## HelloRequest
+    // ## HelloReply
+    rpc Check(CheckRequest) returns (CheckResponse);
+}
+
+// args
+message CheckRequest {
+    string name = 1;
+}
+
+message CheckResponse {
+    // data type and position of data
+    string message = 1;
+}

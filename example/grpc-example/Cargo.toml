@@ -1,0 +1,23 @@
+[package]
+name = "grpc-example"
+version = "0.1.0"
+edition = "2021"
+authors = ["Sahil Kariyania <sahil.kariyania@gmail.com>"]
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+tonic = "0.10"
+prost = "0.12"
+
+[build-dependencies]
+tonic-build = "0.10"
+protobuf-src = "1.1"
+
+[[bin]] # Bin to run the HelloWorld gRPC server
+name = "health-server"
+path = "src/server.rs"
+
+# [[bin]] # Bin to run the HelloWorld gRPC client
+# name = "health-client"
+# path = "src/client.rs"

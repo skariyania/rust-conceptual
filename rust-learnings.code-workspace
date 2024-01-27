@@ -21,6 +21,9 @@
 			"editor.defaultFormatter": "tamasfe.even-better-toml"
 		},
 		"cSpell.words": [
+			"prost",
+			"proto",
+			"protobuf",
 			"rocksdb",
 			"saka"
 		],
