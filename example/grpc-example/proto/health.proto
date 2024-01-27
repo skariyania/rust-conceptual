@@ -2,16 +2,11 @@
 syntax = "proto3";
 
 // package name
-// ## helloworld
 package health;
 
 // executable service
-// ## Greeter
 service Heartbeat {
     // functions
-    // ## SayHello
-    // ## HelloRequest
-    // ## HelloReply
     rpc Check(CheckRequest) returns (CheckResponse);
 }
 
