@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install clang - required for rocksDB build
+      run: sudo apt-get install -y clang
     - uses: actions/checkout@v3
     - name: Build Tutorials
       run: cargo build --verbose --manifest-path tutorials/Cargo.toml
