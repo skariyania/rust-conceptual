@@ -50,7 +50,17 @@ $ cargo test
 ```sh
 $ cargo run
 ```
+# Setup troubleshooter
+Build Error. Related: RocksDB
 
+&NewLine;
+```text
+1) Error
+  $ failed to run custom build command for 'librocksdb-sys v0.16.0+8.10.0'
+  
+  Resolution
+  $ sudo apt install clang
+  ```
 # Rust Learning
 &NewLine;
 > learning rust by reading rust programming book and implementing concepts everyday
