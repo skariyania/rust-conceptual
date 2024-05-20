@@ -690,15 +690,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
 
 [[package]]
-name = "autotools"
-version = "0.2.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "aef8da1805e028a172334c3b680f93e71126f2327622faef2ec3d893c0a4ad77"
-dependencies = [
- "cc",
-]
-
-[[package]]
 name = "averaged_collection"
 version = "0.1.0"
 
@@ -993,6 +984,15 @@ dependencies = [
  "glob",
  "libc",
  "libloading",
+]
+
+[[package]]
+name = "cmake"
+version = "0.1.50"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a31c789563b815f77f4250caee12365734369f942439b7defd71e18a48197130"
+dependencies = [
+ "cc",
 ]
 
 [[package]]
@@ -2623,11 +2623,11 @@ dependencies = [
 
 [[package]]
 name = "protobuf-src"
-version = "1.1.0+21.5"
+version = "2.0.0+26.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c7ac8852baeb3cc6fb83b93646fb93c0ffe5d14bf138c945ceb4b9948ee0e3c1"
+checksum = "9617ed8dcac13e32d6814bb9bed744b45bb9a9535876abc90a3eda43f98e1617"
 dependencies = [
- "autotools",
+ "cmake",
 ]
 
 [[package]]
