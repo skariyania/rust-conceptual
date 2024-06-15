@@ -6,10 +6,5 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-<<<<<<< Updated upstream
-deltalake = "0.16.5"
-tokio = "1.38.0"
-=======
 deltalake = "0.18.0"
 tokio = "1.37.0"
->>>>>>> Stashed changes
