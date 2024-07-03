@@ -32,6 +32,7 @@ members = [
     "workspace/pattern_matching",
     "workspace/pointer_deref",
     "workspace/pointer_drop",
+    "workspace/polymorphism",
     "workspace/rayon_server",
     "workspace/rc_memory_leak",
     "workspace/reference_counter",
