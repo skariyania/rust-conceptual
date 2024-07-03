@@ -19,7 +19,7 @@ pub fn longest<'a>(x: &'a str, y: &str) -> &'a str {
 }
 
 /// .
-/// this function is an example of lifetime ellission
+/// this function is an example of lifetime elision
 /// some patterns does not require lifetime signatures
 pub fn find_word(s: &str) -> &str {
     let bytes = s.as_bytes();
