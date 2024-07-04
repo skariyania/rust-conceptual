@@ -6,6 +6,7 @@ exclude = ["tutorials"]
 members = [
     "example/grpc-example",
     "example/rocksdb-example",
+    "example/web-api",
     "workspace/add_one",
     "workspace/adder",
     "workspace/adder_ws",
