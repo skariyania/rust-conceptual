@@ -5,6 +5,7 @@ exclude = ["tutorials"]
 
 members = [
     "example/cachers",
+    "example/cachers-client",
     "example/grpc-example",
     "example/rocksdb-example",
     "example/web-api",
