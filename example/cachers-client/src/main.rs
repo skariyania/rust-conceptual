@@ -21,7 +21,7 @@ async fn main() -> Result<()> {
                     client.get(&key).await.unwrap();
                 }
                 Set { key, value } => {
-                    println!("received command= Set key = {:?}, val = {:?}", key, val);
+                    println!("received command= Set key = {:?}, val = {:?}", key, value);
                     client.set(&key, value).await.unwrap();
                 }
             }
