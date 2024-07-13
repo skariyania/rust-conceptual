@@ -34,14 +34,17 @@ async fn process(socket: TcpStream, db: Arc<Mutex<HashMap<String, Bytes>>>) {
             Get(cmd) => {
                 let db = db.lock().unwrap();
                 if let Some(value) = db.get(cmd.key()) {
+                    println!("processed GET {:?}", cmd);
                     Frame::Bulk(value.clone())
                 } else {
+                    println!("processed GET {:?}", cmd);
                     Frame::Null
                 }
             }
             Set(cmd) => {
                 let mut db = db.lock().unwrap();
                 db.insert(cmd.key().to_string(), cmd.value().clone());
+                println!("processed SET {:?}", cmd);
                 Frame::Simple("OK".to_string())
             }
 
