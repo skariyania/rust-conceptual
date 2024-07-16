@@ -18,7 +18,7 @@ jobs:
       - name: Install Rust
         run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
       - name: Set up Rust environment
-        run: source $HOME/.cargo/environment
+        run: source $HOME/.cargo/env
       - name: Install clang - required for rocksDB build
         run: sudo apt-get install -y clang
       - uses: actions/checkout@v3
