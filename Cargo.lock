@@ -1339,9 +1339,9 @@ dependencies = [
 
 [[package]]
 name = "deltalake"
-version = "0.18.1"
+version = "0.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b287fdc19e7adbfc4f94bd2c329909f5f0e6d7b7e26d83ea0a7bbc85a0790204"
+checksum = "9f1d68b5f90df3049aa90f1a86dce94a1872a66a73cf16f25aa4b4ed94f27a7b"
 dependencies = [
  "deltalake-core",
 ]
