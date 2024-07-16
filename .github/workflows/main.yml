@@ -15,16 +15,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install Google Mock
-      run: sudo apt-get -y install google-mock libgmock-dev
-    - name: Install clang - required for rocksDB build
-      run: sudo apt-get install -y clang
-    - uses: actions/checkout@v3
-    - name: Build Tutorials
-      run: cargo build --verbose --manifest-path tutorials/Cargo.toml
-    - name: Run Tutorials tests
-      run: cargo test --verbose --manifest-path tutorials/Cargo.toml
-    - name: Build Workspaces
-      run: cargo build --verbose --manifest-path Cargo.toml
-    - name: Run Workspaces tests
-      run: cargo test --verbose --manifest-path Cargo.toml
+      - name: Install Rust
+        run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+      - name: Set up Rust environment
+        run: source $HOME/.cargo/environment
+      - name: Install clang - required for rocksDB build
+        run: sudo apt-get install -y clang
+      - uses: actions/checkout@v3
+      - name: Build Tutorials
+        run: cargo build --verbose --manifest-path tutorials/Cargo.toml
+      - name: Run Tutorials tests
+        run: cargo test --verbose --manifest-path tutorials/Cargo.toml
+      - name: Build Workspaces
+        run: cargo build --verbose --manifest-path Cargo.toml
+      - name: Run Workspaces tests
+        run: cargo test --verbose --manifest-path Cargo.toml
