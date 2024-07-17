@@ -4,7 +4,7 @@ resolver = "2"
 exclude = ["tutorials"]
 
 members = [
-    "example/grpc-example",
+    # "example/grpc-example",
     "example/rocksdb-example",
     "example/web-api",
     "workspace/add_one",
