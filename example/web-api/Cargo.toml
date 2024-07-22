@@ -10,4 +10,5 @@ edition = "2021"
 serde = { version = "1.0.204", features = ["derive"] }
 tokio = { version = "1.38.0", features = ["rt-multi-thread"] }
 tracing-subscriber = { version = "0.3.18" }
+sqlx = { version = "0.7.4", features = ["postgres", "runtime-tokio-rustls"] }
 axum = "0.7.5"

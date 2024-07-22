@@ -26,7 +26,8 @@
 			"proto",
 			"protobuf",
 			"rocksdb",
-			"saka"
+			"saka",
+			"sqlx"
 		],
 	}
 }
