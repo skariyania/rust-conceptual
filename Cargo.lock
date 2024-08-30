@@ -1271,11 +1271,12 @@ dependencies = [
 
 [[package]]
 name = "dashmap"
-version = "5.5.3"
+version = "6.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "978747c1d849a7d2ee5e8adc0159961c48fb7e5db2f06af6723b80123bb53856"
+checksum = "804c8821570c3f8b70230c2ba75ffa5c0f9a4189b9a432b6656c536712acae28"
 dependencies = [
  "cfg-if 1.0.0",
+ "crossbeam-utils",
  "hashbrown",
  "lock_api",
  "once_cell",
@@ -1284,12 +1285,13 @@ dependencies = [
 
 [[package]]
 name = "delta_kernel"
-version = "0.1.1"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b1ddfe35af3696786ab5f23cd995df33a66f6cff272ac1f85e09c1a6316acd4c"
+checksum = "fa08a82239f51e6d3d249c38f0f5bf7c8a78b28587e1b466893c9eac84d252d8"
 dependencies = [
  "arrow-arith",
  "arrow-array",
+ "arrow-cast",
  "arrow-json",
  "arrow-ord",
  "arrow-schema",
@@ -1307,6 +1309,7 @@ dependencies = [
  "rustc_version 0.4.0",
  "serde",
  "serde_json",
+ "strum",
  "thiserror",
  "tracing",
  "url",
@@ -1317,9 +1320,9 @@ dependencies = [
 
 [[package]]
 name = "delta_kernel_derive"
-version = "0.1.1"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e4d2127a34b12919a6bce08225f0ca6fde8a19342a32675370edfc8795e7c38a"
+checksum = "6502fa0ba72fd1f782ccebba8f4c8b9a07c7591559e39d3d05b7ead94690a13f"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1328,18 +1331,18 @@ dependencies = [
 
 [[package]]
 name = "deltalake"
-version = "0.18.1"
+version = "0.19.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b287fdc19e7adbfc4f94bd2c329909f5f0e6d7b7e26d83ea0a7bbc85a0790204"
+checksum = "5c1fabe5673bf78a1eddc9979f25fac3999d4d239650ebf1850960f76a3bcd45"
 dependencies = [
  "deltalake-core",
 ]
 
 [[package]]
 name = "deltalake-core"
-version = "0.18.1"
+version = "0.19.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0068bd92347795c1c5e3b4ef7c5489de289ebe78cc9ab6667c0fbab539da3d7c"
+checksum = "1f4c949a361bc458163233ab10dbe610c89912bdd0f42ccc7a4a25b4c1ec474c"
 dependencies = [
  "arrow",
  "arrow-arith",
@@ -1382,10 +1385,12 @@ dependencies = [
  "roaring",
  "serde",
  "serde_json",
+ "sqlparser",
  "thiserror",
  "tokio",
  "tracing",
  "url",
+ "urlencoding",
  "uuid",
  "z85",
 ]
@@ -1827,6 +1832,12 @@ name = "heck"
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "95505c38b4572b2d910cecb0281560f54b440a19336cbbcb27bf6ce6adc6f5a8"
+
+[[package]]
+name = "heck"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
 
 [[package]]
 name = "hermit-abi"
@@ -3360,6 +3371,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "sqlparser"
+version = "0.49.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a4a404d0e14905361b918cb8afdb73605e25c1d5029312bd9785142dcb3aa49e"
+dependencies = [
+ "log",
+]
+
+[[package]]
 name = "standback"
 version = "0.2.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3451,6 +3471,28 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 1.0.109",
+]
+
+[[package]]
+name = "strum"
+version = "0.26.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8fec0f0aef304996cf250b31b5a10dee7980c85da9d759361292b8bca5a18f06"
+dependencies = [
+ "strum_macros",
+]
+
+[[package]]
+name = "strum_macros"
+version = "0.26.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4c6bee85a5a24955dc440386795aa378cd9cf82acd5f764469152d2270e581be"
+dependencies = [
+ "heck 0.5.0",
+ "proc-macro2",
+ "quote",
+ "rustversion",
+ "syn 2.0.71",
 ]
 
 [[package]]
@@ -3992,6 +4034,12 @@ dependencies = [
  "percent-encoding",
  "serde",
 ]
+
+[[package]]
+name = "urlencoding"
+version = "2.1.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "daf8dba3b7eb870caf1ddeed7bc9d2a049f3cfdfae7cb521b087cc33ae4c49da"
 
 [[package]]
 name = "use_unsafe"
