@@ -1334,18 +1334,18 @@ dependencies = [
 
 [[package]]
 name = "deltalake"
-version = "0.19.0"
+version = "0.19.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5c1fabe5673bf78a1eddc9979f25fac3999d4d239650ebf1850960f76a3bcd45"
+checksum = "1f0e1329698c7e585ee838d62ff12d43ab8c373f298561e99f1c106458f2ba9e"
 dependencies = [
  "deltalake-core",
 ]
 
 [[package]]
 name = "deltalake-core"
-version = "0.19.0"
+version = "0.19.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1f4c949a361bc458163233ab10dbe610c89912bdd0f42ccc7a4a25b4c1ec474c"
+checksum = "120658be361276db2135b8838b1968c9196a1d88c93584c6a294e13c1a234f89"
 dependencies = [
  "arrow",
  "arrow-arith",
@@ -3364,9 +3364,9 @@ dependencies = [
 
 [[package]]
 name = "sqlparser"
-version = "0.49.0"
+version = "0.50.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a4a404d0e14905361b918cb8afdb73605e25c1d5029312bd9785142dcb3aa49e"
+checksum = "b2e5b515a2bd5168426033e9efbfd05500114833916f1d5c268f938b4ee130ac"
 dependencies = [
  "log",
 ]
